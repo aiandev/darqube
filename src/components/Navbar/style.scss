@@ -1,0 +1,53 @@
+@import "sass/variables.scss";
+
+.navbar {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__link {
+    font-family: Ubuntu Bold;
+    font-weight: bold;
+    font-size: 28px;
+    text-decoration: none;
+    line-height: 32px;
+    color: $white;
+    margin-right: 20px;
+
+    &:not(.active) {
+      opacity: 0.5;
+    }
+  }
+
+  &__search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .icon {
+    color: $white;
+    position: absolute;
+    left: 10px;
+    font-size: 10px;
+    cursor: pointer;
+  }
+
+  &__search {
+    height: 30px;
+    width: 160px;
+    background: $charcoal;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 30px;
+    color: $white;
+
+    &::placeholder {
+      font-size: 12px;
+      color: $silver;
+    }
+  }
+}

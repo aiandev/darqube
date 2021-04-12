@@ -1,0 +1,54 @@
+@import "sass/mixins.scss";
+@import "sass/variables.scss";
+
+.latest-news-wrapper {
+  width: 33%;
+  height: 100%;
+  margin-right: 25px;
+
+  .latest-news {
+    height: 70%;
+    @include news-item;
+
+    &-badge {
+      font-family: Ubuntu Bold;
+      font-size: 12px;
+      line-height: 9px;
+      letter-spacing: 0.5px;
+      padding: 4px;
+      color: $white;
+      background: $red;
+    }
+
+    &-headline {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &-details .navigate {
+      font-family: Ubuntu Bold;
+      font-size: 12px;
+      line-height: 14px;
+      color: $white;
+      cursor: pointer;
+
+      .icon {
+        margin-right: 12px;
+      }
+    }
+
+    @media screen and (max-width: 950px) {
+      height: 300px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 45%;
+  }
+
+  @media screen and (max-width: 950px) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+}
